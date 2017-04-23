@@ -1,0 +1,118 @@
+"*":
+  aligner:
+    ":-alignment": "left"
+    ":-leftSpace": true
+  "atom-beautify":
+    apex: {}
+    arduino: {}
+    c: {}
+    cfml: {}
+    coffeescript: {}
+    cpp: {}
+    cs: {}
+    css: {}
+    d: {}
+    ejs: {}
+    erb: {}
+    fortran: {}
+    general:
+      _analyticsUserId: "24e9019c-6013-4c3a-b723-f06646326227"
+    gherkin: {}
+    handlebars: {}
+    html: {}
+    jade: {}
+    java: {}
+    js: {}
+    json: {}
+    jsx: {}
+    latex: {}
+    less: {}
+    marko: {}
+    mustache: {}
+    objectivec: {}
+    pawn: {}
+    perl: {}
+    php: {}
+    python: {}
+    riot: {}
+    ruby: {}
+    rust: {}
+    sass: {}
+    scss: {}
+    spacebars: {}
+    sql: {}
+    svg: {}
+    swig: {}
+    tss: {}
+    twig: {}
+    typescript: {}
+    vala: {}
+    visualforce: {}
+    xml: {}
+    xtemplate: {}
+  core:
+    audioBeep: false
+    closeEmptyWindows: false
+    disabledPackages: [
+      "git-log"
+      "linter-coffee-variables"
+      "linter-erlang"
+      "autocomplete-erlang"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Fira code"
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "elm-format":
+    binary: "elm-format"
+  "exception-reporting":
+    userId: "7a1010ea-6221-34d5-0c85-cdaf3ea3b4a0"
+  "file-icons":
+    onChanges: true
+  "git-log": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "f76c1f7b-cda1-4c7a-ab4f-84235f654a7f"
+  "language-babel": {}
+  "language-elm":
+    elmOraclePath: "/Users/tadeuszlazurski/.nvm/versions/node/v4.3.1/bin/elm-oracle"
+  linter: {}
+  "linter-elm-make":
+    lintOnTheFly: true
+  "linter-ui-default":
+    showPanel: true
+  "markdown-preview":
+    breakOnSingleNewline: true
+    openPreviewInSplitPane: false
+    useGitHubStyle: true
+  minimap: {}
+  todo:
+    a_pattern: "TODO\\:.+|FIXME\\:.+"
+    c_ignorePaths: [
+      "**/node_modules/**"
+      "**/build/**"
+      "**/built/**"
+      "**/lib/**"
+      "**/dist/**"
+    ]
+  "tree-view":
+    autoReveal: true
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".elm.source":
+  editor:
+    tabLength: 4
+".git-commit.text":
+  editor:
+    preferredLineLength: 72
