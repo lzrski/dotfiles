@@ -58,6 +58,7 @@
       "linter-coffee-variables"
       "linter-erlang"
       "autocomplete-erlang"
+      "linter-jshint"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -89,12 +90,18 @@
   "linter-elm-make":
     lintOnTheFly: true
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 93
   "markdown-preview":
     breakOnSingleNewline: true
     openPreviewInSplitPane: false
     useGitHubStyle: true
   minimap: {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    prettierOptions:
+      singleQuote: true
+    useEslint: true
   todo:
     a_pattern: "TODO\\:.+|FIXME\\:.+"
     c_ignorePaths: [
