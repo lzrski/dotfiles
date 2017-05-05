@@ -52,7 +52,7 @@ ZSH_THEME="amuse"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 export NVM_LAZY_LOAD=true
-plugins=(git docker zsh-nvm keybase)
+plugins=(git docker zsh-nvm keybase per-directory-history)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias make=gmake
-
+alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 # Make the prompt live (update clock every second)
 # Screws interactive tab completion :(
 
