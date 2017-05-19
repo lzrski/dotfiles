@@ -1,0 +1,3 @@
+setxkbmap pl
+xrandr --dpi 166
+export $(gnome-keyring-daemon -s)
