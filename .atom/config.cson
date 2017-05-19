@@ -52,6 +52,7 @@
     xtemplate: {}
   core:
     audioBeep: false
+    autoHideMenuBar: true
     closeEmptyWindows: false
     disabledPackages: [
       "git-log"
