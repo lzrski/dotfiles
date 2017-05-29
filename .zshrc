@@ -96,7 +96,14 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 #     zle reset-prompt
 # }
 
+# Update prompt before executing the command (to get aproximate time of call)
+# Doesn't work. Investigate
+# preexec() {
+#   zle reset-prompt
+# }
+
+
 # Environment variables
 
 export EDITOR="emacs"
-export PATH="./node_modules/.bin/:$PATH"
+export PATH="./node_modules/.bin/:$HOME/.yarn/bin:$PATH"
