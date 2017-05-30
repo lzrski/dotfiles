@@ -1,0 +1,28 @@
+# Software to install on new machine:
+
+# Window manager and related tools
+i3wm
+i3blocks
+i3lock
+xautolock
+
+# Development tools
+httpie
+jq
+zsh-nvm $ git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm && nvm upgrade
+atom $ echo download and install atom from https://atom.io/
+
+# Docker and stuff - do I want to install it automatically?
+# apt-transport-https
+# ca-certificates
+# curl
+# gnupg2
+# software-properties-common
+# docker-repo $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable && apt update"
+# docker
+# docker-compose $ echo install docker-compose manually from
+
+# Fonts
+font-awesome $ echo Download Font Awesome font from http://fontawesome.io/
+fira-code $ echo Download Fira Code font from https://github.com/tonsky/FiraCode
+font-cache $ echo Then put your fonts in .fonts and run: fc-cache -f -v
