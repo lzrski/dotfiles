@@ -1,4 +1,5 @@
 # Software to install on new machine:
+# TODO: Investigate NIX package manager
 
 # Window manager and related tools
 i3wm
