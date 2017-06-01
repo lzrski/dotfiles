@@ -1,6 +1,9 @@
 # Software to install on new machine:
 # TODO: Investigate NIX package manager
 
+# Shell
+zsh
+
 # Window manager and related tools
 i3wm
 i3blocks
@@ -24,6 +27,5 @@ atom $ echo download and install atom from https://atom.io/
 # docker-compose $ echo install docker-compose manually from
 
 # Fonts
-font-awesome $ echo Download Font Awesome font from http://fontawesome.io/
-fira-code $ echo Download Fira Code font from https://github.com/tonsky/FiraCode
-font-cache $ echo Then put your fonts in .fonts and run: fc-cache -f -v
+fonts-font-awesome
+fonts-firacode
