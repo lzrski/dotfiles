@@ -1,4 +1,5 @@
 #! /usr/bin/env sh
+set -e
 
 origin="git@github.com:lzrski/dotfiles.git"
 local=".dotfiles.git"
@@ -18,7 +19,7 @@ fi
 # Setup dotfiles command
 echo "$local" > .gitignore
 git clone --bare "$origin" "$HOME/$local"
-alias dotfiles=git --git-dir="$HOME/$local" --work-tree="$HOME"
+alias dotfiles='git --git-dir="$HOME/$local" --work-tree="$HOME"'
 dotfiles config --local status.showUntrackedFiles no
 
 # Install actual files
