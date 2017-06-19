@@ -9,6 +9,7 @@ i3wm
 i3blocks
 i3lock
 xautolock
+xbacklight # see also https://askubuntu.com/a/715310/146579
 
 # Development tools
 httpie
