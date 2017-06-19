@@ -203,4 +203,7 @@ set $lock_and_suspend i3lock -fc 002b36 && sleep 1 && systemctl suspend
 bindsym $mod+Pause exec --no-startup-id $lock_and_suspend
 bindsym XF86Sleep exec --no-startup-id $lock_and_suspend
 
-exec --no-startup-id compton -f
+# See also .config/compton.conf
+exec --no-startup-id compton
+
+exec --no-startup-id redshift
