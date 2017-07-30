@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+#
+# Manage Git repository for my nixos configuration.
+
+origin="git@github.com:lzrski/nixos-configuration.git"
+local=".nixos-configuration.git"
+
+if [[ ! -d  "${HOME}/${local}" ]]
+then
+  echo "Looks like it's the first time you are using nixos-configuration script ('${HOME}/${local}' directory does not exists). I will now set things up for you."
+
+  set -x
+  git clone --bare "${origin}" "${HOME}/${local}"
+  git \
+    --git-dir="${HOME}/${local}" \
+    --work-tree="/etc/nixos/" \
+    status
+  set +x
+fi
+
+git \
+  --git-dir="${HOME}/${local}" \
+  --work-tree="/etc/nixos/" \
+  $@
