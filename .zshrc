@@ -105,5 +105,5 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 # Environment variables
 
-export EDITOR="emacs"
+export EDITOR="vim"
 export PATH="./node_modules/.bin/:$HOME/.yarn/bin:$PATH"
