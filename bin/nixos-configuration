@@ -21,4 +21,4 @@ fi
 git \
   --git-dir="${HOME}/${local}" \
   --work-tree="/etc/nixos/" \
-  $@
+  "$@"
