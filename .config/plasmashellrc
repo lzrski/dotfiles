@@ -1,0 +1,15 @@
+[PlasmaRunnerManager]
+pluginWhiteList=services,places,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 3][Horizontal2880]
+thickness=48
+
+[PlasmaViews][Panel 3][Horizontal3840]
+thickness=30
+
+[ScreenConnectors]
+0=HDMI3
+1=eDP1
+
+[Updates]
+performed=/run/current-system/sw/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

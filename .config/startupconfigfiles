@@ -1,0 +1,66 @@
+kcminputrc Mouse cursorTheme 'breeze_cursors'
+/home/tadeusz/.config/kcminputrc
+!/home/tadeusz/.nix-profile/etc/xdg/kcminputrc
+!/nix/var/nix/profiles/default/etc/xdg/kcminputrc
+!/run/current-system/sw/etc/xdg/kcminputrc
+!/home/tadeusz/.local/share/config/kcminputrc
+!/run/opengl-driver/share/config/kcminputrc
+!/home/tadeusz/.nix-profile/share/config/kcminputrc
+!/nix/var/nix/profiles/default/share/config/kcminputrc
+!/run/current-system/sw/share/config/kcminputrc
+*
+kcminputrc Mouse cursorSize ''
+/home/tadeusz/.config/kcminputrc
+!/home/tadeusz/.nix-profile/etc/xdg/kcminputrc
+!/nix/var/nix/profiles/default/etc/xdg/kcminputrc
+!/run/current-system/sw/etc/xdg/kcminputrc
+!/home/tadeusz/.local/share/config/kcminputrc
+!/run/opengl-driver/share/config/kcminputrc
+!/home/tadeusz/.nix-profile/share/config/kcminputrc
+!/nix/var/nix/profiles/default/share/config/kcminputrc
+!/run/current-system/sw/share/config/kcminputrc
+*
+ksplashrc KSplash Theme org.kde.breeze.desktop
+/home/tadeusz/.config/ksplashrc
+!/home/tadeusz/.nix-profile/etc/xdg/ksplashrc
+!/nix/var/nix/profiles/default/etc/xdg/ksplashrc
+!/run/current-system/sw/etc/xdg/ksplashrc
+!/home/tadeusz/.local/share/config/ksplashrc
+!/run/opengl-driver/share/config/ksplashrc
+!/home/tadeusz/.nix-profile/share/config/ksplashrc
+!/nix/var/nix/profiles/default/share/config/ksplashrc
+!/run/current-system/sw/share/config/ksplashrc
+*
+ksplashrc KSplash Engine KSplashQML
+/home/tadeusz/.config/ksplashrc
+!/home/tadeusz/.nix-profile/etc/xdg/ksplashrc
+!/nix/var/nix/profiles/default/etc/xdg/ksplashrc
+!/run/current-system/sw/etc/xdg/ksplashrc
+!/home/tadeusz/.local/share/config/ksplashrc
+!/run/opengl-driver/share/config/ksplashrc
+!/home/tadeusz/.nix-profile/share/config/ksplashrc
+!/nix/var/nix/profiles/default/share/config/ksplashrc
+!/run/current-system/sw/share/config/ksplashrc
+*
+kdeglobals KScreen ScreenScaleFactors ''
+/home/tadeusz/.config/kdeglobals
+!/home/tadeusz/.nix-profile/etc/xdg/kdeglobals
+!/nix/var/nix/profiles/default/etc/xdg/kdeglobals
+!/run/current-system/sw/etc/xdg/kdeglobals
+!/home/tadeusz/.local/share/config/kdeglobals
+!/run/opengl-driver/share/config/kdeglobals
+!/home/tadeusz/.nix-profile/share/config/kdeglobals
+!/nix/var/nix/profiles/default/share/config/kdeglobals
+!/run/current-system/sw/share/config/kdeglobals
+*
+kcmfonts General forceFontDPI 0
+!/home/tadeusz/.config/kcmfonts
+!/home/tadeusz/.nix-profile/etc/xdg/kcmfonts
+!/nix/var/nix/profiles/default/etc/xdg/kcmfonts
+!/run/current-system/sw/etc/xdg/kcmfonts
+!/home/tadeusz/.local/share/config/kcmfonts
+!/run/opengl-driver/share/config/kcmfonts
+!/home/tadeusz/.nix-profile/share/config/kcmfonts
+!/nix/var/nix/profiles/default/share/config/kcmfonts
+!/run/current-system/sw/share/config/kcmfonts
+*

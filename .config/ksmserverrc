@@ -1,0 +1,32 @@
+[General]
+screenCount=1
+
+[LegacySession: saved at previous logout]
+clientMachine1=localhost
+clientMachine2=localhost
+clientMachine3=localhost
+clientMachine4=localhost
+clientMachine5=localhost
+clientMachine6=localhost
+command1=/run/current-system/sw/bin/feh,--theme=feh,/home/tadeusz/.gnome2/cheese/media/2017-07-29-215803_3.jpg
+command2=/run/current-system/sw/bin/feh,--theme=feh,/home/tadeusz/.gnome2/cheese/media/2017-07-29-215803_4.jpg
+command3=/run/current-system/sw/bin/feh,--theme=feh,/home/tadeusz/.gnome2/cheese/media/2017-07-29-215803_2.jpg
+command4=/run/current-system/sw/bin/feh,--theme=feh,/home/tadeusz/.gnome2/cheese/media/2017-07-29-215803_3.jpg
+command5=/run/current-system/sw/bin/feh,--theme=feh,/home/tadeusz/.gnome2/cheese/media/2017-07-29-215803_4.jpg
+command6=cheese
+count=6
+
+[Session: saved at previous logout]
+clientId1=1022d1ab1b512b000150135790200000011170002
+clientId2=1022d1ab1b512b000150135896500000011170003
+count=2
+program1=firefox
+program2=vlc
+restartCommand1=firefox,--sm-client-id,1022d1ab1b512b000150135790200000011170002
+restartCommand2=vlc,-session,1022d1ab1b512b000150135896500000011170003_1501358965_957521
+restartStyleHint1=0
+restartStyleHint2=0
+userId1=tadeusz
+userId2=tadeusz
+wasWm1=false
+wasWm2=false
