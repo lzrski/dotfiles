@@ -3,11 +3,13 @@
 setxkbmap pl
 
 # Load screen layout (using xrandr).
-. "${HOME}/.screenlayout/scrambled-office.sh"
+. "${HOME}/.screenlayout/macbook-pro-2015-home.sh"
 
 # and X resources with correct DPI for Chromium, Atom etc.
 xrdb -merge "${HOME}/.Xresources"
+xrdb -merge "${HOME}/.Xresources.dark"
 
 # Use gnome keyring to store passwords for ssh keys etc.
 export $(gnome-keyring-daemon -s)
 
+export TERMINAL=konsole
