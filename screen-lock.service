@@ -1,0 +1,19 @@
+# Goes to /etc/systemd/system/screen-lock.service
+#     sudo ln -s screen-lock.service /etc/systemd/system/
+# Then:
+#     sudo systemctl enable screen-lock.service
+# TODO: Now it's locking immediately after wakeup. Fix.
+
+[Unit]
+Description=Starts i3lock at suspend time
+Before=sleep.target
+
+[Service]
+User=tadeusz
+Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=
+ExecStart=/usr/bin/i3lock -fc 002b36
+
+[Install]
+WantedBy=sleep.target

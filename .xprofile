@@ -1,0 +1,13 @@
+#! /usr/bin/env sh
+
+setxkbmap pl
+
+# Load screen layout (using xrandr).
+. "${HOME}/.screenlayout/scrambled-office.sh"
+
+# and X resources with correct DPI for Chromium, Atom etc.
+xrdb -merge "${HOME}/.Xresources"
+
+# Use gnome keyring to store passwords for ssh keys etc.
+export $(gnome-keyring-daemon -s)
+
