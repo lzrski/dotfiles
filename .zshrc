@@ -52,7 +52,15 @@ ZSH_THEME="amuse"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 export NVM_LAZY_LOAD=true
-plugins=(git docker zsh-nvm keybase per-directory-history)
+export NVM_AUTO_USE=true
+plugins=(
+  git
+  docker
+  zsh-nvm
+  keybase
+  per-directory-history
+  pyenv
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,13 +69,13 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -98,5 +106,52 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 # Environment variables
 
-export EDITOR="emacs"
-export PATH="./node_modules/.bin/:$PATH"
+export EDITOR="nvim"
+export VISUAL="nvim"
+export GOPATH="${HOME}/go"
+export PATH="./node_modules/.bin/:${PATH}"
+export PATH="/usr/local/opt/gettext/bin:${PATH}"
+export PATH="/usr/local/opt/m4/bin:${PATH}"
+export PATH="${GOPATH}/bin:${PATH}"
+
+
+# Vi mode
+# https://dougblack.io/words/zsh-vi-mode.html 
+
+bindkey -v
+
+# Press v in normal mode to edit command line in Vim
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey -M vicmd v edit-command-line
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+# https://archive.emily.st/2013/05/03/zsh-vi-cursor/
+function zle-keymap-select zle-line-init
+{
+    # change cursor shape in iTerm2
+    case $KEYMAP in
+        vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
+        viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
+    esac
+
+    zle reset-prompt
+    zle -R
+}
+
+function zle-line-finish
+{
+    print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+

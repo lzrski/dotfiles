@@ -173,3 +173,6 @@ PATH="./node_modules/.bin:$PATH"
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+

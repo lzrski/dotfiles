@@ -1,0 +1,26 @@
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "runtime": "node",
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test"
+      }
+    }
+  },
+  "codeLens.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "elm",
+    "javascript",
+    "json",
+    "css",
+    "Markdown"
+  ],
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.extensionUpdateCheck": "daily"
+}

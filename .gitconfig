@@ -1,5 +1,7 @@
 [user]
 	email = tadeusz@lazurski.pl
-	name = Tadeusz Łazurski
+	name = Tad Lispy
 [core]
-	editor = vim
+	editor = nvim
+[push]
+	followTags = true
