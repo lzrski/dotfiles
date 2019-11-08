@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 set -e
 
-origin="git@github.com:lzrski/dotfiles.git"
+origin="git@github.com:tad-lispy/dotfiles.git"
 local=".dotfiles.git"
 
 # Abort if dotfiles are already installed
