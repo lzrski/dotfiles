@@ -24,6 +24,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'qpkorr/vim-renamer'
 
 call plug#end()
 
@@ -56,7 +57,7 @@ set splitbelow
 set splitright
 
 " In normal mode press esc to deactivate highliting
-nmap <esc> :nohlsearch<cr>
+nnoremap <esc> :nohlsearch<cr>
 
 " In terminal mode press esc to go to normal mode
 " tnoremap <esc> <C-\><C-n>
@@ -69,10 +70,12 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
+nnoremap <silent> gh :call CocAction('doHover')<cr>
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
 
 " Use tab to navigate completion list
 " inoremap <silent><expr> <TAB>
