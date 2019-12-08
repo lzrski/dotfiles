@@ -51,7 +51,6 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 plugins=(
   git
