@@ -119,7 +119,7 @@ export PATH="./node_modules/.bin/:${PATH}"
 export PATH="/usr/local/opt/gettext/bin:${PATH}"
 export PATH="/usr/local/opt/m4/bin:${PATH}"
 export PATH="${GOPATH}/bin:${PATH}"
-
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # Vi mode
 # https://dougblack.io/words/zsh-vi-mode.html 
