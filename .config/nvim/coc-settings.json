@@ -35,5 +35,6 @@
     "haskell"
   ],
   "eslint.autoFixOnSave": true,
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "prettier.requireConfig": true
 }
