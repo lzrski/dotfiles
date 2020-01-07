@@ -86,17 +86,21 @@
       _analyticsUserId: "f76c1f7b-cda1-4c7a-ab4f-84235f654a7f"
   "language-babel": {}
   "language-elm":
+    autocompleteEnabled: false
     elmOraclePath: "/Users/tadeuszlazurski/.nvm/versions/node/v4.3.1/bin/elm-oracle"
   linter: {}
   "linter-elm-make":
     lintOnTheFly: true
   "linter-ui-default":
-    panelHeight: 93
+    panelHeight: 300
   "markdown-preview":
     breakOnSingleNewline: true
     openPreviewInSplitPane: false
     useGitHubStyle: true
-  minimap: {}
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
