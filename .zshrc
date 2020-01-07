@@ -115,11 +115,12 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 export EDITOR="nvim"
 export VISUAL="nvim"
 export GOPATH="${HOME}/go"
-export PATH="./node_modules/.bin/:${PATH}"
+export PATH="${GOPATH}/bin:${PATH}"
 export PATH="/usr/local/opt/gettext/bin:${PATH}"
 export PATH="/usr/local/opt/m4/bin:${PATH}"
-export PATH="${GOPATH}/bin:${PATH}"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="./node_modules/.bin/:${PATH}"
 
 # Vi mode
 # https://dougblack.io/words/zsh-vi-mode.html 
