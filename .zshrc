@@ -103,11 +103,6 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 #     zle reset-prompt
 # }
 
-# Update prompt before executing the command (to get aproximate time of call)
-# Doesn't work. Investigate
-# preexec() {
-#   zle reset-prompt
-# }
 
 
 # Environment variables
@@ -121,6 +116,11 @@ export PATH="/usr/local/opt/m4/bin:${PATH}"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="./node_modules/.bin/:${PATH}"
+
+# Haskell stack
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
 
 # Vi mode
 # https://dougblack.io/words/zsh-vi-mode.html 
@@ -162,3 +162,11 @@ zle -N zle-line-finish
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
+# Update clock in the prompt just before executing the
+# command
+update-propmt-and-accept-line() {
+  zle reset-prompt
+  zle accept-line
+}
+zle -N update-propmt-and-accept-line
+bindkey "^M" update-propmt-and-accept-line
