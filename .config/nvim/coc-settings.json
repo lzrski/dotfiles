@@ -27,6 +27,9 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "elm",
     "javascript",
+    "js",
+    "typescript",
+    "ts",
     "json",
     "css",
     "Markdown",
