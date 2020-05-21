@@ -92,7 +92,6 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias make=gmake
 alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 # Make the prompt live (update clock every second)
 # Screws interactive tab completion :(
@@ -111,11 +110,23 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export GOPATH="${HOME}/go"
 export PATH="${GOPATH}/bin:${PATH}"
+export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}:${MANPATH}"
 export PATH="/usr/local/opt/gettext/bin:${PATH}"
 export PATH="/usr/local/opt/m4/bin:${PATH}"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
+export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="./node_modules/.bin/:${PATH}"
+
+# Colorful ls output.
+# Somehow installing GNU coreutils and setting as defauls broke colors for me.
+# This is block fixes it.
+eval $(dircolors)
+
+alias ls='ls --color=auto'
+alias ll='ls -lh'
 
 # Haskell stack
 autoload -U +X compinit && compinit
