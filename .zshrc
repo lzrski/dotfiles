@@ -128,9 +128,8 @@ export PATH="./node_modules/.bin/:${PATH}"
 
 # Colorful ls output.
 # Somehow installing GNU coreutils and setting as defauls broke colors for me.
-# This is block fixes it.
+# This block fixes it.
 eval $(dircolors)
-
 alias ls='ls --color=auto'
 alias ll='ls -lh'
 
