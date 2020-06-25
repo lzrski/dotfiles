@@ -55,6 +55,7 @@ export NVM_AUTO_USE=true
 plugins=(
   git
   docker
+  docker-compose
   zsh-nvm
   keybase
   per-directory-history
@@ -93,6 +94,8 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+alias edit='emacsclient --no-wait'
+
 # Make the prompt live (update clock every second)
 # Screws interactive tab completion :(
 
@@ -106,6 +109,7 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 # Environment variables
 
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 export GOPATH="${HOME}/go"
@@ -113,6 +117,8 @@ export PATH="${GOPATH}/bin:${PATH}"
 export PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}:${MANPATH}"
+export PATH="/usr/local/opt/make/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/make/libexec/gnuman:${MANPATH}:${MANPATH}"
 export PATH="/usr/local/opt/gettext/bin:${PATH}"
 export PATH="/usr/local/opt/m4/bin:${PATH}"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
@@ -133,6 +139,9 @@ autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 eval "$(stack --bash-completion-script stack)"
 
+# Nix
+source $HOME/.nix-profile/etc/profile.d/nix.sh
+
 # Vi mode
 # https://dougblack.io/words/zsh-vi-mode.html 
 
@@ -143,12 +152,17 @@ bindkey -v
 # zle -N edit-command-line
 # bindkey -M vicmd v edit-command-line
 
+bindkey "^[[A" history-beginning-search-backward # Up
+bindkey "^[[B" history-beginning-search-forward  # Down
+
 bindkey '^P' up-history
 bindkey '^N' down-history
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+bindkey '^g' per-directory-history-toggle-history
+bindkey '^a' insert-last-word
 
 # https://archive.emily.st/2013/05/03/zsh-vi-cursor/
 function zle-keymap-select zle-line-init
@@ -181,3 +195,7 @@ update-propmt-and-accept-line() {
 }
 zle -N update-propmt-and-accept-line
 bindkey "^M" update-propmt-and-accept-line
+
+# Direnv setup
+eval "$(direnv hook zsh)"
+
