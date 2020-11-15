@@ -27,6 +27,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'qpkorr/vim-renamer'
 Plug 'vimwiki/vimwiki'
+Plug 'severin-lemaignan/vim-minimap'
 
 call plug#end()
 
@@ -38,6 +39,7 @@ set relativenumber
 set termguicolors
 set linebreak
 set colorcolumn=80
+set clipboard=unnamedplus
 colorscheme solarized8_flat
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']

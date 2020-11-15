@@ -2,7 +2,13 @@
   "languageserver": {
     "haskell": {
       "command": "hie-wrapper",
-      "rootPatterns": ["stack.yaml", "cabal.config", "package.yaml"],
+      "rootPatterns": [
+        "stack.yaml",
+        "cabal.config",
+        "package.yaml",
+        "cabal.project",
+        "*.cabal"
+      ],
       "filetypes": ["hs", "lhs", "haskell"],
       "initializationOptions": {
         "languageServerHaskell": {
@@ -39,5 +45,6 @@
   ],
   "eslint.autoFixOnSave": true,
   "coc.preferences.extensionUpdateCheck": "daily",
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "suggest.timeout": 5000
 }
