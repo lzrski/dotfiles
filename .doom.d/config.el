@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name (shell-command-to-string "git config user.name")
+      user-mail-address (shell-command-to-string "git config user.email"))
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -48,3 +48,28 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+(add-hook 'dante-mode-hook
+   '(lambda () (flycheck-add-next-checker 'haskell-dante
+                '(warning . haskell-hlint))))
+
+(setq haskell-stylish-on-save t)
+(setq haskell-mode-stylish-haskell-path "brittany")
+
+(setq display-line-numbers-type 'relative)
+
+(setq scroll-margin 5)
+
+(setq org-babel-clojure-backend 'cider)
+
+(add-hook 'elm-mode-hook 'elm-format-on-save-mode)
+
+;; (after! lsp
+;;   (setq lsp-enable-symbol-highlighting nil)
+;;   (setq lsp-enable-snippet t))
+
+
+;; (after! lsp-ui
+;;   (setq lsp-ui-doc-max-width 100)
+;;   (setq lsp-ui-doc-max-height 30))
+  ;; (setq company-lsp-cache-candidates nil)
